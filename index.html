@@ -10,48 +10,48 @@
 </head>
 
 <body>
-  <div>
-    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <strong class="navbar-item">Catálogo de productos</strong>
-        <a id="burger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+  
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <strong class="navbar-item">Catálogo de productos</strong>
+      <a id="burger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div  id="nav-links" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Inicio
+        </a>
+
+        <a class="navbar-item">
+          Catálogo
         </a>
       </div>
-      <div  id="nav-links" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item">
-            Inicio
-          </a>
-
-          <a class="navbar-item">
-            Catálogo
-          </a>
-        </div>
-        
-        <div class="navbar-end">
-          <div class="navbar-item">            
-            <div class="buttons">
-              <a class="button is-medium is-light mdi mdi-cart-variant">Carrito</a>
-            </div>
+      
+      <div class="navbar-end">
+        <div class="navbar-item">            
+          <div class="buttons">
+            <a class="button is-medium is-light mdi mdi-cart-variant">Carrito</a>
           </div>
-          <div class="navbar-item">
-            <div class="field">
-              <div class="control has-icons-right">
-                <input type="text" name="search" id="search" placeholder="Search" class="input">
-                <span class="icon is-right is-small">
-                  <i class="mdi mdi-magnify"></i>
-                </span>
-              </div>
+        </div>
+        <div class="navbar-item">
+          <div class="field">
+            <div class="control has-icons-right">
+              <input type="text" name="search" id="search" placeholder="Search" class="input">
+              <span class="icon is-right is-small">
+                <i class="mdi mdi-magnify"></i>
+              </span>
             </div>
           </div>
         </div>
-
       </div>
-    </nav>
-  </div>
+
+    </div>
+  </nav>
+
   <div class="container is-fluid mt-2" >
     <div class="columns is-desktop">
       <div class="column">
@@ -98,12 +98,14 @@
             </div>
           </div>
           <div class="card-footer">
-            <a class="card-footer-item">Agregar</a>
-            <a class="card-footer-item ">
-              <div class="icon  mdi mdi-eye"></div>
-              <span>
-                Ver detalle
-              </span> 
+            <a class="card-footer-item"  onclick="openDetail()">
+              Agregar
+           </a>
+            <a class="card-footer-item ">      
+                <div class="icon  mdi mdi-eye"></div>
+                <span>
+                  Ver detalle
+                </span>              
             </a>
           </div>
         </div>
@@ -288,6 +290,37 @@
       </nav>
     </section>
   </div>
+  <div class="modal" id="modalDetail">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+
+      <section class="modal-card-body p-0">
+        <section class="hero is-link">
+          <div class="hero-body">
+            <p class="title">
+              MacBook Pro M1
+            </p>
+            <p class="subtitle">
+              Lo mejor que puedes comprar este 2021
+            </p>
+          </div>
+        </section>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-link">Agregar</button>
+        <button class="button" onclick="openDetail()">Cancelar</button>
+      </footer>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+      </p>
+    </div>
+  </footer>
   <script src="js/index.js"></script>
 </body>
 
